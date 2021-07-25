@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ContactsManager</string>
+    <string name="name">Boris</string>
+    <string name="lastName">Johnson</string>
+    <string name="sex">Mr</string>
+    <string name="email">boris1964@gmail.com</string>
+    <string name="tel">+440 12 345 67 89</string>
+    <string name="btItemAdjust">Adjust</string>
+    <string name="btItemDelete">Delete</string>
+    <string name="dialog">Do you want to delete this contact?</string>
+    <string name="dialog_yes">yes</string>
+    <string name="dialog_no">no</string>
+    <string name="etSex">Mr or Mrs</string>
+    <string name="etLastName">Last name</string>
+    <string name="etemail">email</string>
+    <string name="etName">Name</string>
+    <string name="etPhone">phone</string>
+    <string name="load_photo">load photo</string>
+    <string name="change">Choose what you want to change and click</string>
+    <string name="set_up">set up</string>
+</resources>

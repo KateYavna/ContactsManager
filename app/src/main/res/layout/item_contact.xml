@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemContact"
+        android:layout_width="409dp"
+        android:layout_height="250dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivItemPhoto"
+            android:layout_width="124dp"
+            android:layout_height="127dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="@+id/btItemAdjust"
+            app:layout_constraintTop_toBottomOf="@+id/btItemAdjust"
+            app:srcCompat="@drawable/boris_johnson" />
+
+        <TextView
+            android:id="@+id/tvItemSex"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/sex"
+            app:layout_constraintStart_toEndOf="@+id/ivItemPhoto"
+            app:layout_constraintTop_toTopOf="@+id/ivItemPhoto" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/name"
+            app:layout_constraintStart_toEndOf="@+id/tvItemSex"
+            app:layout_constraintTop_toTopOf="@+id/tvItemSex" />
+
+        <TextView
+            android:id="@+id/tvItemLastName"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/lastName"
+            app:layout_constraintStart_toEndOf="@+id/tvItemName"
+            app:layout_constraintTop_toTopOf="@+id/tvItemName" />
+
+        <TextView
+            android:id="@+id/tvItemEmail"
+            style="@style/detailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="@+id/tvItemSex"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemSex" />
+
+        <TextView
+            android:id="@+id/tvItemTel"
+            style="@style/detailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tel"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/tvItemEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemEmail" />
+
+        <Button
+            android:id="@+id/btItemAdjust"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/btItemAdjust"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btItemDelete"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/btItemDelete"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibFAB"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clItemContact"
+        tools:visibility="invisible">
+
+        <EditText
+            android:id="@+id/etSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/etSex"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/etName"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/etSex"
+            app:layout_constraintTop_toBottomOf="@+id/etSex" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/etLastName"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/etName"
+            app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/etemail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@+id/etLastName"
+            app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/etPhone"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="@+id/etEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <Button
+            android:id="@+id/btLoadPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/load_photo"
+            app:layout_constraintStart_toEndOf="@+id/etSex"
+            app:layout_constraintTop_toTopOf="@+id/etSex" />
+
+        <Button
+            android:id="@+id/btSetUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/set_up"
+            app:layout_constraintBottom_toBottomOf="@+id/etPhone"
+            app:layout_constraintStart_toEndOf="@+id/etPhone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvDialog"
+        style="@style/Text"
+        android:layout_width="371dp"
+        android:layout_height="610dp"
+        android:padding="20dp"
+        android:text="@string/dialog"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDialogYes"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/dialog_yes"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDialogNo"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/dialog_no"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
